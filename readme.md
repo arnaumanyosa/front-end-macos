@@ -1,10 +1,7 @@
 # Front-End Development Setup on a Mac
 
-This document assumes you're running a fresh and updated copy of **macOS "formerly known as OS X"**.
-
 The following workflow assumes a clean installation of macOS. While it's okay to have third-party software installed, the installation process will be more streamlined and less convoluted with a new macOS.
 
-- [Command Line Interface](#command-line-interface)
 - [System update and Disk Encryption](#system-update-and-disk-encryption)
 - [System tweaks](#system-tweaks)
 - [Projects Directory](#projects-directory)
@@ -23,18 +20,6 @@ The following workflow assumes a clean installation of macOS. While it's okay to
 - [VirtualBox](#virtualbox)
 - [Docker](#docker)
 - [Vagrant](#vagrant)
-
-## Command Line Interface
-
-Throughout this document, you will encounter examples like this that contain one or more of the arguments listed:
-
-```bash
-sudo command -flag --flag directory file.extention # Comments are behind pound signs
-```
-
-Anytime you see this, it is referring to your CLI of choice, whether it's the built-in Terminal.app or a third-party application like [iTerm2](https://iterm2.com/).
-
-Front-end development has increasingly moved towards an open-source driven, command-line interface (CLI) dependent workflow. Whether we access modules, packages or simply useful commands, setting up a command-line shell to your liking is a good idea.
 
 ## System update and Disk Encryption
 
@@ -58,17 +43,11 @@ Two main caveats:
 - **Do not misplace or forget your FileVault recovery key or login password**. Losing this password means you cannot log in and without the recovery key everything on your computer is inaccessible if you can't decrypt the files during a recovery. iCloud is an option to store the Filevault password. Using iCloud, Apple Support will be able to assist you with recovering data. iCloud isn't fully encrypted so whilt it's convenient, it's less secure.
 - If macOS gets corrupted and you need to download files from the drive after accessing the drive from an external case, it's not possible without the password and recovery key. Make sure you're both backing up using [Time Machine](https://support.apple.com/en-us/HT201250) on an external drive or a NAS, and a cloud backup provider like [Backblaze](https://www.backblaze.com/), [Carbonite](https://carbonite.com/), or [iDrive](https://www.idrive.com).
 
-### Enable Firewall
-
-This is for online protection when you're not in your home network or not behind a router.
-
-```bash
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-```
-
 ## System Tweaks
 
 Apple's default system settings are limiting and don't show a lot of information. Let's change the settings for better usability around the system.
+
+A script is created to run all of them easily. See here https://github.com/arnaumanyosa/dotfiles/blob/main/macos-system-tweaks.sh
 Note: keep in mind you probably have to re-open Finder or Terminal to see these changes
 
 ### Unhide the Library folder
